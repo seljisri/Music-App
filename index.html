@@ -3,22 +3,94 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Music App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concert Finder</title>
   <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+  <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 </head>
 
 <body> 
   <main>
-    <h1>Music App</h1>  
-    
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 id="app-name" class="title is-1 has-text-white">Concert Finder</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="main">
+      <div class="columns is-centered">
+        <div class="column is-3">
+          <div class="control search-control">
+            <input id="artist" class="input is-medium search-input" type="text" placeholder="Artist">
+          </div>  
+        </div>
+        <div class="column is-3">
+          <div class="control search-control">
+            <input id="city" class="input is-medium search-input" type="text" placeholder="City">
+          </div> 
+        </div>
+        <div class="column is-2">
+          <div class="control search-control">
+            <a id="search" class="button is-info is-medium">Search</a>
+          </div>
+        </div>
+      </div>
+        
+      <div class="columns is-centered">
+        <div class="column is-6">
+          <table id="events" class="table is-invisible">
+            <thead>
+              <tr>
+                <th>Event</th>
+                <th>Venue</th>
+                <th>Location</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="eventsRows">
+              <tr>
+                <td class="event-td">Event 1</td>
+                <td class="venue-td">Venue 1</td>
+                <td class="location-id">Location 1</td>
+                <td class="date-td">Date 1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="column is-3">
+          <h2 id="h2-similar" class="is-invisible">You may also like:</h2>
+          <table id="similar-artists" class="table is-invisible">
+            <tbody id="similarArtistRows" class="similar">
+              <tr>
+                <td>Img 1</td>
+                <td class="has-text-centered">Artist 1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div> 
+    </section>
+
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+    
     <!-- External JavaScript -->
-    <script src="assets/javascript/application.js"></script>
+    <script src="assets/javascript/application.js"></script> 
   </main>
+
+  <footer class="footer has-background-primary is-paddingless">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p class="has-text-weight-light has-text-white">Copyright &copy; 2018 Concert Finder</p>
+      </div>
+    </div>
+  </footer>
+
 </body>
     
 </html>
